@@ -1,0 +1,50 @@
+<ion-header style="z-index: 100;">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/recipes"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="container">
+    <ion-grid class="wrapper">
+      <ion-row justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+          <div padding>
+            <div text-center>
+              <h4>Upload File</h4>
+            </div>
+            <ion-item>
+              <input type="file" [(ngModel)]="img" />
+            </ion-item>
+
+            <ion-item>
+              <ion-input
+                type="text"
+                [(ngModel)]="title"
+                placeholder="Title"
+              ></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-input
+                type="text"
+                [(ngModel)]="source"
+                placeholder="Source"
+              ></ion-input>
+            </ion-item>
+          </div>
+
+          <div padding>
+            <ion-button
+              style="margin-top: 20px;"
+              (click)="onSubmit()"
+              expand="block"
+              >Upload</ion-button
+            >
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
