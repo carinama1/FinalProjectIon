@@ -14,9 +14,9 @@ const routes: Routes = [
           {
             path: "",
             loadChildren: () =>
-              import("../home/home.module").then(m => m.HomePageModule)
-          }
-        ]
+              import("../home/home.module").then((m) => m.HomePageModule),
+          },
+        ],
       },
       {
         path: ":type",
@@ -24,26 +24,26 @@ const routes: Routes = [
           {
             path: "",
             loadChildren: () =>
-              import("../home/home.module").then(m => m.HomePageModule)
-          }
-        ]
+              import("../home/home.module").then((m) => m.HomePageModule),
+          },
+        ],
       },
       {
         path: "",
-        redirectTo: "home",
-        pathMatch: "full"
-      }
-    ]
+        redirectTo: "/home",
+        pathMatch: "full",
+      },
+    ],
   },
   {
     path: "",
     redirectTo: "/home",
-    pathMatch: "full"
-  }
+    pathMatch: "full",
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class RoutesPageRoutingModule {}

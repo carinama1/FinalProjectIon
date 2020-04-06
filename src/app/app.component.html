@@ -1,58 +1,57 @@
 <!-- <ion-header [translucent]="true">
-    <ion-toolbar color="primary">
-        <ion-buttons slot="start">
-            <ion-menu-button></ion-menu-button>
-        </ion-buttons>
-        <ion-title>
-            U-Design
-        </ion-title>
-        <ion-buttons slot="primary">
-            <ion-button routerLink="/upload">
-                <ion-icon name="add" slot="icon-only"></ion-icon>
-            </ion-button>
-        </ion-buttons>
-    </ion-toolbar>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      U-Design
+    </ion-title>
+    <ion-buttons slot="primary">
+      <ion-button routerLink="/upload">
+        <ion-icon name="add" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-    <ion-app>
-        <ion-menu side="start">
-            <ion-content>
-                <ion-list>
-                    <ion-menu-toggle>
-                        <ion-item lines="none" routerLink="#">
-                            <ion-icon name="home" slot="start"></ion-icon>
-                            <ion-title></ion-title>
-                        </ion-item>
-                        <ion-item lines="none" routerLink="/">
-                            <ion-icon name="home" slot="start"></ion-icon>
-                            <ion-title>Home</ion-title>
-                        </ion-item>
-                    </ion-menu-toggle>
-                    <ion-menu-toggle>
-                        <ion-item lines="none" [routerLink]="['/', 'home', 'vote']">
-                            <ion-icon name="checkbox-outline" slot="start"></ion-icon>
-                            <ion-title>Vote</ion-title>
-                        </ion-item>
-                    </ion-menu-toggle>
-                    <ion-menu-toggle *ngIf="isLogin">
-                        <ion-item lines="none" (click)="onLogout()" button="button">
-                            <ion-icon name="exit" slot="start"></ion-icon>
-                            <ion-title>Logout</ion-title>
-                        </ion-item>
-                    </ion-menu-toggle>
-                    <ion-menu-toggle *ngIf="!isLogin">
-                        <ion-item lines="none" [routerLink]="['login']" button="button">
-                            <ion-icon name="exit" slot="start"></ion-icon>
-                            <ion-title>Login</ion-title>
-                        </ion-item>
-                    </ion-menu-toggle>
-                </ion-list>
-            </ion-content>
-        </ion-menu>
-        <ion-router-outlet main="main"></ion-router-outlet>
-    </ion-app>
+  <ion-app>
+    <ion-menu side="start">
+      <ion-content>
+        <ion-list>
+          <ion-menu-toggle>
+            <ion-item lines="none" routerLink="#">
+              <ion-icon name="home" slot="start"></ion-icon>
+              <ion-title></ion-title>
+            </ion-item>
+            <ion-item lines="none" routerLink="/">
+              <ion-icon name="home" slot="start"></ion-icon>
+              <ion-title>Home</ion-title>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle>
+            <ion-item lines="none" [routerLink]="['/', 'home', 'vote']">
+              <ion-icon name="checkbox-outline" slot="start"></ion-icon>
+              <ion-title>Vote</ion-title>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle *ngIf="isLogin">
+            <ion-item lines="none" (click)="onLogout()" button="button">
+              <ion-icon name="exit" slot="start"></ion-icon>
+              <ion-title>Logout</ion-title>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle *ngIf="!isLogin">
+            <ion-item lines="none" [routerLink]="['login']" button="button">
+              <ion-icon name="exit" slot="start"></ion-icon>
+              <ion-title>Login</ion-title>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+  </ion-app>
 </ion-content> -->
 <ion-content>
-    <ion-router-outlet></ion-router-outlet>
+  <ion-router-outlet></ion-router-outlet>
 </ion-content>
